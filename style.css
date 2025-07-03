@@ -1,58 +1,205 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+    --primary-color: #0e2431;
+    --secondary-color: #6a59d1;
+    --accent-color: #777;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --card-background: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
+/* --- Reset & Base Styles --- */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 1rem;
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-nav a {
-    color: #fff;
+a {
     text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 1rem;
+a:hover {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 section {
-    margin-bottom: 2rem;
+    padding: 60px 20px;
+    max-width: 968px;
+    margin: 0 auto;
 }
 
-h1, h2 {
-    margin-top: 0;
+/* --- Header & Navigation --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--card-background);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 968px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* --- Hero/Home Section --- */
+#home {
+    text-align: center;
+    padding-top: 120px; /* Offset for fixed header */
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Section Titles --- */
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary-color);
+}
+
+/* --- Projects Section --- */
+#projects .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 .project {
-    margin-bottom: 1rem;
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
 }
 
 .project h3 {
-    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
-.project a {
-    display: inline-block;
-    margin-top: 0.5rem;
+.project p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+/* --- Skills Section --- */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#skills li {
+    background: var(--card-background);
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+}
+
+/* --- Resume & Contact Section --- */
+#resume, #contact {
     text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+#contact p {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--primary-color);
+    color: #fff;
 }
