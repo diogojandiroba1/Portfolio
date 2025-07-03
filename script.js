@@ -6,7 +6,7 @@ AOS.init({
 
 // --- Initialize Typed.js ---
 var typed = new Typed(".auto-type", {
-    strings: ["a Developer.", "a Tech Enthusiast.", "a Problem Solver.", "always learning."],
+    strings: ["Desenvolvedor.", "um Entusiasta de Tecnologia.", "um Solucionador de Problemas.", "sempre aprendendo."],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
