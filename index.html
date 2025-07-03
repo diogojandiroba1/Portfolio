@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Diogo Jandiroba</title>
     
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
     <!-- AOS (Animate on Scroll) CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -43,25 +46,34 @@
         <section id="projects">
             <h2 data-aos="fade-up">Projetos</h2>
             <div class="project-container">
-                <div class="project" data-aos="flip-left">
-                    <h3>Projeto de Scraping de Dados Esportivos</h3>
-                    <p>Desenvolvi ferramentas automatizadas de scraping para coletar dados de sites esportivos, estruturando e mantendo um banco de dados com as informações obtidas. Além disso, implementei rotinas de análise para gerar estatísticas e insights relevantes.</p>
-                    <p><strong>Tecnologias:</strong> Python, BeautifulSoup (BS4), Selenium, Pandas, NumPy, SQL </p>
-                    <a href="#" class="btn">Ver Projeto</a>
-                </div>
+                <a href="#" class="project-link-wrapper" data-aos="flip-left">
+                    <div class="project">
+                        <img src="https://via.placeholder.com/350x200/6a59d1/ffffff?text=Projeto+1" alt="Placeholder para o Projeto 1" class="project-img">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição do projeto 1.</p>
+                        <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                    </div>
+                </a>
+                <a href="#" class="project-link-wrapper" data-aos="flip-left" data-aos-delay="200">
+                    <div class="project">
+                        <img src="https://via.placeholder.com/350x200/0e2431/ffffff?text=Projeto+2" alt="Placeholder para o Projeto 2" class="project-img">
+                        <h3>Projeto 2</h3>
+                        <p>Descrição do projeto 2.</p>
+                        <p><strong>Tecnologias:</strong> Python, Django, PostgreSQL</p>
+                    </div>
+                </a>
             </div>
         </section>
 
         <section id="skills" data-aos="zoom-in">
             <h2>Habilidades</h2>
-            <ul>
-                <li>C</li>
-                <li>Python</li>
-                <li>Pandas</li>
-                <li>Numpy</li>
-                <li>Selenium</li>
-                <li>BeautifulSoup</li>
-                <li>SQL</li>
+            <ul class="skills-list">
+                <li><i class="fab fa-html5"></i> HTML</li>
+                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                <li><i class="fab fa-js-square"></i> JavaScript</li>
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fab fa-envira"></i> Django</li> <!-- Using a generic leaf icon for Django -->
+                <li><i class="fas fa-database"></i> PostgreSQL</li>
             </ul>
         </section>
 
@@ -72,10 +84,18 @@
 
         <section id="contact" data-aos="fade-up">
             <h2>Contato</h2>
+            <p class="contact-intro">Tem uma pergunta ou quer trabalhar junto? Me envie uma mensagem!</p>
+            <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
             <div class="contact-links">
-                <a href="mailto:diogojandiroba@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="www.linkedin.com/in/diogojandiroba" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/diogojandiroba1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/diogojandiroba" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/diogojandiroba" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </section>
     </main>
