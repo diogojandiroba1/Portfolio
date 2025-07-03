@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,25 +31,25 @@
 
     <main>
         <section id="home">
-            <h1>Welcome to my Portfolio</h1>
-            <p>I am a computer science student with a passion for technology.</p>
+            <h1 data-aos="fade-down">Welcome to my Portfolio</h1>
+            <p data-aos="fade-up">I am a <span class="auto-type"></span></p>
         </section>
 
-        <section id="about">
+        <section id="about" data-aos="fade-right">
             <h2>About Me</h2>
             <p>I am a highly motivated and results-oriented computer science student with a strong foundation in software development and a passion for creating innovative solutions. I am eager to apply my skills and knowledge to a challenging role in the tech industry.</p>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 data-aos="fade-up">Projects</h2>
             <div class="project-container">
-                <div class="project">
+                <div class="project" data-aos="flip-left">
                     <h3>Project 1</h3>
                     <p>Description of project 1.</p>
                     <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
                     <a href="#" class="btn">View Project</a>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="flip-left" data-aos-delay="200">
                     <h3>Project 2</h3>
                     <p>Description of project 2.</p>
                     <p><strong>Technologies:</strong> Python, Django, PostgreSQL</p>
@@ -50,7 +58,7 @@
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" data-aos="zoom-in">
             <h2>Skills</h2>
             <ul>
                 <li>HTML</li>
@@ -62,16 +70,18 @@
             </ul>
         </section>
 
-        <section id="resume">
+        <section id="resume" data-aos="fade-up">
             <h2>Resume</h2>
             <a href="#" class="btn">Download My Resume</a>
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up">
             <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: linkedin.com/in/your-profile</p>
-            <p>GitHub: github.com/your-username</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </section>
     </main>
 
@@ -79,6 +89,13 @@
         <p>&copy; 2025 Your Name. All Rights Reserved.</p>
     </footer>
 
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Main Script -->
     <script src="script.js"></script>
 </body>
 </html>

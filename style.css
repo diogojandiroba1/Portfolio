@@ -192,8 +192,22 @@ h2::after {
     color: #fff;
 }
 
-#contact p {
-    margin-bottom: 0.5rem;
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-links a i {
+    font-size: 1.5rem;
 }
 
 /* --- Footer --- */
